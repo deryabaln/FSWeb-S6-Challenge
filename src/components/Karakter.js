@@ -5,7 +5,7 @@ import { Accordion, AccordionBody, AccordionHeader, AccordionItem } from 'reacts
 import Filmler from "./Filmler";
 
 const Karakter = (props) => {
-    const { data, page} = props;
+    const { data, page } = props;
     const [open, setOpen] = useState("");
     const toggle = (id) => {
         if (open === id) {
@@ -29,7 +29,7 @@ const Karakter = (props) => {
                             <p>Hair Color: {item.hair_color}</p>
                             <p>Skin Color: {item.skin_color}</p>
                             <p>Films:</p>
-                            <Filmler data={[item]} page={page}/>
+                            <Filmler data={[item]} page={page} />
                         </AccordionBody>
                     </AccordionItem>
                 ))}

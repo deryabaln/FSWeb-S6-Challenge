@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Accordion, AccordionBody, AccordionHeader, AccordionItem } from 'reactstrap';
 
 const Filmler = (props) => {
-  const{data,page}= props;
+  const { data, page } = props;
   const [films, setFilms] = useState([]);
 
   useEffect(() => {
@@ -15,14 +15,14 @@ const Filmler = (props) => {
 
   const [open, setOpen] = useState("");
   const toggle = (id) => {
-        if (open === id) {
-        setOpen();
-        } else {
-        setOpen(id);
-        }
-    };
+    if (open === id) {
+      setOpen();
+    } else {
+      setOpen(id);
+    }
+  };
 
-return (
+  return (
     <Accordion flush open={open} toggle={toggle}>
       {films.map((film) => {
         if (data.find(item => item.films.includes(film.url))) {

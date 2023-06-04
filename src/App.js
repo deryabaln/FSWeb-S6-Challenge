@@ -50,7 +50,7 @@ const App = () => {
       <Music />
       <h1 className="Header">STAR WARS</h1>
       <Search data={data} setData={setData} />
-      <Karakter data={data} page={page}/>
+      <Karakter data={data} page={page} />
       <PaginationStyle getPreviousPage={getPreviousPage} handleChangePage={handleChangePage} getNextPage={getNextPage} firstPage={firstPage} lastPage={lastPage} />
     </div>
   );
