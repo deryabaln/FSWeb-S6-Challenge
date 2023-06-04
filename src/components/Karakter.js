@@ -2,9 +2,10 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Accordion, AccordionBody, AccordionHeader, AccordionItem } from 'reactstrap';
+import Filmler from "./Filmler";
 
 const Karakter = (props) => {
-    const { data } = props;
+    const { data, page} = props;
     const [open, setOpen] = useState("");
     const toggle = (id) => {
         if (open === id) {
@@ -27,6 +28,8 @@ const Karakter = (props) => {
                             <p>Eye Color: {item.eye_color}</p>
                             <p>Hair Color: {item.hair_color}</p>
                             <p>Skin Color: {item.skin_color}</p>
+                            <p>Films:</p>
+                            <Filmler data={[item]} page={page}/>
                         </AccordionBody>
                     </AccordionItem>
                 ))}

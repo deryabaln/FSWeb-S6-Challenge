@@ -9,7 +9,7 @@ const Music = () => {
     return () => {
       setIsMusicPlaying(false);
     };
-  }, []);
+  }, [isMusicPlaying]);
 
   return (
     <div>
